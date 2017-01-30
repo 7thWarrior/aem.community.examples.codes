@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1485808324028
+Bnd-LastModified: 1485811308027
 Build-Jdk: 1.8.0_65
 Built-By: 7thWarrior
 Bundle-Description: Core bundle for AemCommunityExamples
@@ -22,31 +22,33 @@ Export-Package: aem.community.examples.codes.core.controllers;version="1
  ling.api,org.apache.sling.api.servlets"
 Import-Package: aem.community.examples.codes.core.services;version="[1.0
  ,2)",com.adobe.cq.sightly;version="[2.5,3)",javax.annotation,javax.inje
- ct;version="[1.0,2)",javax.jcr;version="[2.0,3)",javax.servlet,org.apac
- he.sling.api;version="[2.3,3)",org.apache.sling.api.request;version="[2
- .4,3)",org.apache.sling.api.resource;version="[2.9,3)",org.apache.sling
- .api.scripting;version="[2.2,3)",org.apache.sling.api.servlets;version=
- "[2.1,3)",org.apache.sling.commons.osgi;version="[2.4,3)",org.apache.sl
- ing.models.annotations;version="[1.2,2)",org.apache.sling.settings;vers
- ion="[1.3,2)",org.osgi.framework;version="[1.5,2)",org.osgi.service.com
- ponent.runtime;version="[1.3,2)";resolution:=optional,org.osgi.service.
- component.runtime.dto;version="[1.3,2)";resolution:=optional,org.osgi.s
- ervice.event;version="[1.2,2)",org.osgi.util.promise;version="[1.0,2)";
- resolution:=optional,org.slf4j;version="[1.5,2)"
+ ct;version="[1.0,2)",javax.jcr;version="[2.0,3)",javax.jcr.query;versio
+ n="[2.0,3)",javax.servlet,org.apache.sling.api;version="[2.3,3)",org.ap
+ ache.sling.api.request;version="[2.4,3)",org.apache.sling.api.resource;
+ version="[2.9,3)",org.apache.sling.api.scripting;version="[2.2,3)",org.
+ apache.sling.api.servlets;version="[2.1,3)",org.apache.sling.commons.os
+ gi;version="[2.4,3)",org.apache.sling.models.annotations;version="[1.2,
+ 2)",org.apache.sling.settings;version="[1.3,2)",org.osgi.framework;vers
+ ion="[1.5,2)",org.osgi.service.component.runtime;version="[1.3,2)";reso
+ lution:=optional,org.osgi.service.component.runtime.dto;version="[1.3,2
+ )";resolution:=optional,org.osgi.service.event;version="[1.2,2)",org.os
+ gi.util.promise;version="[1.0,2)";resolution:=optional,org.slf4j;versio
+ n="[1.5,2)"
 Provide-Capability: osgi.service;effective:=active;objectClass="javax.se
  rvlet.Servlet";service.vendor=Adobe,osgi.service;effective:=active;obje
  ctClass="java.lang.Runnable";scheduler.expression="*/30 * * * * ?";sche
  duler.concurrent=false;service.vendor=Adobe,osgi.service;effective:=act
- ive;objectClass="aem.community.examples.codes.core.services.ReadService
- ";service.vendor=Adobe,osgi.service;effective:=active;objectClass="java
- x.servlet.Filter";service.ranking=-700;sling.filter.scope=REQUEST;servi
- ce.vendor=Adobe,osgi.service;effective:=active;objectClass="aem.communi
- ty.examples.codes.core.services.ComponentDisablerDriver";service.rankin
- g=200;service.vendor=Adobe,osgi.service;effective:=active;objectClass="
- org.osgi.service.event.EventHandler";event.topics="org/apache/sling/api
- /resource/Resource/*";service.vendor=Adobe,osgi.service;effective:=acti
- ve;objectClass="org.osgi.service.event.EventHandler";service.vendor=Ado
- be
+ ive;objectClass="aem.community.examples.codes.core.services.CustomerSer
+ vice";service.vendor=Adobe,osgi.service;effective:=active;objectClass="
+ aem.community.examples.codes.core.services.ReadService";service.vendor=
+ Adobe,osgi.service;effective:=active;objectClass="javax.servlet.Filter"
+ ;service.ranking=-700;sling.filter.scope=REQUEST;service.vendor=Adobe,o
+ sgi.service;effective:=active;objectClass="aem.community.examples.codes
+ .core.services.ComponentDisablerDriver";service.ranking=200;service.ven
+ dor=Adobe,osgi.service;effective:=active;objectClass="org.osgi.service.
+ event.EventHandler";event.topics="org/apache/sling/api/resource/Resourc
+ e/*";service.vendor=Adobe,osgi.service;effective:=active;objectClass="o
+ rg.osgi.service.event.EventHandler";service.vendor=Adobe
 Require-Capability: osgi.service;effective:=active;filter:="(objectClass
  =org.apache.sling.api.resource.ResourceResolverFactory)",osgi.service;e
  ffective:=active;filter:="(objectClass=aem.community.examples.codes.cor
@@ -60,6 +62,8 @@ Service-Component: OSGI-INF/aem.community.y.examples.codes.core.servlets
  odes.core.filters.LoggingFilter.xml,OSGI-INF/aem.community.examples.cod
  es.core.services.impl.ComponentDisabler.xml,OSGI-INF/aem.community.exam
  ples.codes.core.services.impl.ComponentDisablerDriverDS13.xml,OSGI-INF/
- aem.community.y.examples.codes.core.schedulers.SimpleScheduledTask.xml
+ aem.community.examples.codes.core.services.impl.CustomerServiceImp.xml,
+ OSGI-INF/aem.community.y.examples.codes.core.schedulers.SimpleScheduled
+ Task.xml
 Sling-Model-Packages: aem.community.y.examples.codes.core
 Tool: Bnd-2.3.0.201405100607
