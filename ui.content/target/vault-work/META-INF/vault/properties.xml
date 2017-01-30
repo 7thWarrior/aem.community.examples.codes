@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>AemCommunityExamples - UI content</comment>
+<entry key="createdBy">7thWarrior</entry>
+<entry key="name">aem.community.examples.codes.ui.content</entry>
+<entry key="created">2017-01-29T17:50:33.948+0530</entry>
+<entry key="groupId">AEM.Community.examples</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">AemCommunityExamples</entry>
+<entry key="description">UI content package for AemCommunityExamples</entry>
+<entry key="artifactId">aem.community.examples.codes.ui.content</entry>
+<entry key="path">/etc/packages/AemCommunityExamples/aem.community.examples.codes.ui.content.zip</entry>
+</properties>

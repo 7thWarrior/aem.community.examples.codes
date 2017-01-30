@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.2.0">
+    <scr:component immediate="true" name="aem.community.examples.codes.core.services.impl.ComponentDisabler" configuration-policy="require" activate="activate">
+        <implementation class="aem.community.examples.codes.core.services.impl.ComponentDisabler"/>
+        <service servicefactory="false">
+            <provide interface="org.osgi.service.event.EventHandler"/>
+        </service>
+        <property name="event.topics">
+            org/osgi/framework/BundleEvent/STARTED
+            org/osgi/framework/ServiceEvent/REGISTERED
+        </property>
+        <property name="components"/>
+        <property name="service.vendor" value="Adobe"/>
+        <property name="service.pid" value="aem.community.examples.codes.core.services.impl.ComponentDisabler"/>
+        <reference name="componentDisabler" interface="aem.community.examples.codes.core.services.ComponentDisablerDriver" cardinality="1..1" policy="static" bind="bindComponentDisabler" unbind="unbindComponentDisabler" policy-option="greedy"/>
+    </scr:component>
+</components>
