@@ -238,7 +238,6 @@ Asset asset, String mimeType,RenditionMaker renditionMaker)throws RepositoryExce
    return null;
  }
  
-
  protected boolean handleAsset(Asset asset, Config config)
  {
    if ((asset == null) || (config.skipMimeTypes == null)) {
