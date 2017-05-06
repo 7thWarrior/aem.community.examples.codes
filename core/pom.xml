@@ -39,12 +39,10 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <!--
                         <Embed-Dependency>
-                            artifactId1,
-                            artifactId2;inline=true
+                            commons-email,
+                            org.apache.sling.event;
                         </Embed-Dependency>
-                        -->
                         <Sling-Model-Packages>
                             aem.community.y.examples.codes.core
                         </Sling-Model-Packages>
@@ -78,10 +76,10 @@
         </profile>
     </profiles>
     <dependencies>
-	    <dependency>
+	     <dependency>
 	            <groupId>com.adobe.aem</groupId>
 	            <artifactId>uber-jar</artifactId>
-	            <classifier>obfuscated-apis</classifier>
+	            <classifier>apis</classifier>
 	        </dependency>
 	 
 	        <dependency>
@@ -164,5 +162,26 @@
             <version>4.6.1</version>
             <scope>provided</scope>
         </dependency>
+		        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-email</artifactId>
+		    <version>1.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.sling/org.apache.sling.event -->
+		<dependency>
+		    <groupId>org.apache.sling</groupId>
+		    <artifactId>org.apache.sling.event</artifactId>
+		    <version>4.0.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/commons-lang/commons-lang -->
+<dependency>
+    <groupId>commons-lang</groupId>
+    <artifactId>commons-lang</artifactId>
+    <version>2.6</version>
+</dependency>
+		
+		
+        
     </dependencies>
 </project>

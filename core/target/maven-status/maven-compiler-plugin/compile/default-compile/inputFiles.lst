@@ -1,4 +1,5 @@
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/filters/LoggingFilter.java
+/Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/servlets/MySafeMethodServlet.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/examples/codes/core/services/impl/CustomerServiceImp.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/examples/codes/core/services/impl/ComponentDisablerDriverDS13.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/schedulers/SimpleScheduledTask.java
@@ -8,8 +9,9 @@
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/models/Customer.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/listeners/SimpleResourceListener.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/examples/codes/core/services/CustomerService.java
+/Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/examples/codes/core/workflow/CreateThumbnailProcessCustom.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/examples/codes/core/services/impl/ReadServiceImpl.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/models/HelloWorldModel.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/examples/codes/core/controllers/UserMapperExamToGetResource.java
+/Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/listeners/ReplicationEventListner.java
 /Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/package-info.java
-/Users/apple/Library/Mobile Documents/com~apple~CloudDocs/7thWarrior-SRF/IT/Adobe/AEM-ExcVidDocs/aem.community.examples.codes/core/src/main/java/aem/community/y/examples/codes/core/servlets/SimpleServlet.java

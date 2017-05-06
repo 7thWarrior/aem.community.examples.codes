@@ -92,7 +92,7 @@
                                 </requireMavenVersion>
                                 <requireJavaVersion>
                                     <message>Project must be compiled with Java 6 or higher</message>
-                                    <version>1.6.0</version>
+                                    <version>1.7.0</version>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
@@ -387,7 +387,7 @@
                <groupId>com.adobe.aem</groupId>
                <artifactId>uber-jar</artifactId>
                <version>6.2.0</version>
-               <classifier>obfuscated-apis</classifier>
+               <classifier>apis</classifier>
                <scope>provided</scope>
            </dependency>
             <dependency>
@@ -396,14 +396,7 @@
                <version>1.0</version>
                <scope>provided</scope>
            </dependency>
-            
-           <dependency>
-               <groupId>org.apache.geronimo.specs</groupId>
-               <artifactId>geronimo-atinject_1.0_spec</artifactId>
-               <version>1.0</version>
-               <scope>provided</scope>
-           </dependency>
-        
+
             <!-- OSGi Dependencies -->
             <dependency>
                 <groupId>org.apache.felix</groupId>
