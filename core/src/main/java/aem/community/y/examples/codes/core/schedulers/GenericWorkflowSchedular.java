@@ -17,14 +17,26 @@ package aem.community.y.examples.codes.core.schedulers;
 
 import java.util.Map;
 
+import javax.jcr.Session;
+
 import org.apache.felix.scr.annotations.Activate;
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Properties;
 import org.apache.felix.scr.annotations.Property;
+import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.commons.osgi.PropertiesUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.day.cq.workflow.WorkflowException;
+import com.day.cq.workflow.WorkflowService;
+import com.day.cq.workflow.WorkflowSession;
+import com.day.cq.workflow.exec.WorkflowData;
+import com.day.cq.workflow.model.WorkflowModel;
+
+import aem.community.examples.codes.core.services.impl.AdminSessionServiceImpl;
+import aem.community.examples.codes.core.utils.LoggerUtil;
 
 /**
  * A simple demo for cron-job like tasks that get executed regularly.
@@ -32,7 +44,8 @@ import org.slf4j.LoggerFactory;
  * set the property values in /system/console/configMgr
  */
 @Component(metatype = true, label = "Generic Schedular", 
-    description = "Generic Schedular to schedule worflows using Quartz Syntax")
+    description = "Generic Schedular to schedule worflows using Quartz Syntax",
+    configurationFactory=true)
 @Service(value = Runnable.class)
 @Properties({
     @Property(name = "scheduler.expression", value = "*/30 * * * * ?",
@@ -52,9 +65,24 @@ public class GenericWorkflowSchedular implements Runnable {
     public static final String WORKFLOW_PAYLOAD = "aem.community.example.simpleworkflowschedular.workflowpayload";
     private String payLoad;
     
+    @Reference
+    private WorkflowService workflowService;
+    
+    Session session=new AdminSessionServiceImpl().getAdminSession();
+    
     @Override
     public void run() {
         logger.debug("SimpleScheduledTask is now running, myParameter='{}'", workflowId);
+        
+        WorkflowSession wfSession=workflowService.getWorkflowSession(session);
+        try {
+			WorkflowModel wfModel=wfSession.getModel(workflowId);
+			WorkflowData wfData=wfSession.newWorkflowData("JCR_PATH",payLoad);
+			wfSession.startWorkflow(wfModel, wfData);
+		} catch (WorkflowException e) {
+			LoggerUtil.errorLog(this.getClass(), "Exception in Generic Workflow "
+					+ "Schedular::{}",e);
+		}
     }
     
 
