@@ -31,8 +31,8 @@ import org.slf4j.LoggerFactory;
  * It also demonstrates how property values can be set. Users can
  * set the property values in /system/console/configMgr
  */
-@Component(metatype = true, label = "A scheduled task", 
-    description = "Simple demo for cron-job like task with properties")
+@Component(metatype = true, label = "Generic Schedular", 
+    description = "Generic Schedular to schedule worflows using Quartz Syntax")
 @Service(value = Runnable.class)
 @Properties({
     @Property(name = "scheduler.expression", value = "*/30 * * * * ?",
@@ -40,18 +40,24 @@ import org.slf4j.LoggerFactory;
     @Property(name = "scheduler.concurrent", boolValue=false,
         description = "Whether or not to schedule this task concurrently")
 })
-public class SimpleScheduledTask implements Runnable {
+public class GenericWorkflowSchedular implements Runnable {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
     
+    @Property(label="Workflow ID",description="Workflow ID of targeted workflow which is being scheduled")
+    public static final String WORKFLOW_ID="aem.community.example.simpleworkflowschedular.workflowId";
+    private String workflowId;
+
+    @Property(label = "Workflow Payload", description = "Payload to start targeted Worflow")
+    public static final String WORKFLOW_PAYLOAD = "aem.community.example.simpleworkflowschedular.workflowpayload";
+    private String payLoad;
+    
     @Override
     public void run() {
-        logger.debug("SimpleScheduledTask is now running, myParameter='{}'", myParameter);
+        logger.debug("SimpleScheduledTask is now running, myParameter='{}'", workflowId);
     }
     
-    @Property(label = "A parameter", description = "Can be configured in /system/console/configMgr")
-    public static final String MY_PARAMETER = "myParameter";
-    private String myParameter;
+
     
     @Activate
     protected void activate(final Map<String, Object> config) {
@@ -59,7 +65,9 @@ public class SimpleScheduledTask implements Runnable {
     }
 
     private void configure(final Map<String, Object> config) {
-        myParameter = PropertiesUtil.toString(config.get(MY_PARAMETER), null);
-        logger.debug("configure: myParameter='{}''", myParameter);
+        workflowId = PropertiesUtil.toString(config.get(WORKFLOW_ID), null);
+        payLoad = PropertiesUtil.toString(config.get(WORKFLOW_PAYLOAD), null);
+        logger.debug("configure: workflowId='{}''", workflowId);
+        logger.debug("configure: payload='{}''", payLoad);
     }
 }
